@@ -11,11 +11,10 @@ import spock from '../../assets/games/icon-spock.svg'
 
 import { Game } from '../../components/Game'
 
-export const Content = styled.main`
+export const Content = styled.div`
 
-
+    flex-grow: 1;
     position: relative;
-    height: 75vh;
     background: url(${BGpentagon}) no-repeat center;
     background-size: contain;
     padding-block: 10rem;

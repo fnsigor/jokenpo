@@ -2,10 +2,8 @@ import styled, { css } from 'styled-components'
 
 
 export const Content = styled.div`
-    height:  fit-content;
-    min-height: 25vh;
-
-    position: relative;
+    padding-top: 3rem;
+    background-color: red;
 `
 
 export const Container = styled.div`
@@ -23,11 +21,6 @@ export const Container = styled.div`
     margin-inline: auto;
 
     border-radius: 10px;
-
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
 `
 
 export const GamesDiv = styled.div`

@@ -29,12 +29,10 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body{
-
-   background: radial-gradient(var(--Radial-Gradient)) no-repeat;
+    background: radial-gradient(var(--Radial-Gradient)) no-repeat;
     color: #fff;
 
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;   
 }
 
 `
