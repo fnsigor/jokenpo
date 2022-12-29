@@ -6,14 +6,14 @@ import { Score } from './components/Score'
 
 function App() {
 
-   const [picked, setPickedStatus] = useState(false)
-   const [selectedGame, setNewGame] = useState('rock')
+
+   const [selectedGame, setNewGame] = useState(false)
    const [points, setPoint] = useState(0)
 
    return (
       <>
          <Score points={points}/>
-         {picked ? (<Result selectedGame={selectedGame}/>) : (<Select setNewGame={setNewGame} setPickedStatus={setPickedStatus}/>)}
+         {selectedGame ? (<Result selectedGame={selectedGame}/>) : (<Select setNewGame={setNewGame}/>)}
       </>
    )
 }

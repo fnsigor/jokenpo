@@ -1,6 +1,13 @@
 import styled, { css } from 'styled-components'
 
 
+export const Content = styled.div`
+    height:  fit-content;
+    min-height: 25vh;
+
+    position: relative;
+`
+
 export const Container = styled.div`
     border: 1px solid #fff;
     padding: 2rem 1.5rem;
@@ -11,10 +18,16 @@ export const Container = styled.div`
     align-items: center;
 
     max-width: 85rem;
-    margin-bottom: 5rem;
+    width: 100%;
+
     margin-inline: auto;
 
     border-radius: 10px;
+
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
 `
 
 export const GamesDiv = styled.div`
@@ -59,22 +72,25 @@ export const ScoreBox = styled.div`
 
 export function Score({ points }) {
     return (
-        <Container>
-            <GamesDiv>
-                <span>ROCK</span>
-                <span>PAPER</span>
-                <span>SCISSORS</span>
-                <span>LIZARD</span>
-                <span>SPOCK</span>
-            </GamesDiv>
-            <ScoreBox>
-                <span className='title'>
-                    score
-                </span>
-                <span className='number'>
-                    {points}
-                </span>
-            </ScoreBox>
-        </Container>
+        <Content>
+
+            <Container>
+                <GamesDiv>
+                    <span>ROCK</span>
+                    <span>PAPER</span>
+                    <span>SCISSORS</span>
+                    <span>LIZARD</span>
+                    <span>SPOCK</span>
+                </GamesDiv>
+                <ScoreBox>
+                    <span className='title'>
+                        score
+                    </span>
+                    <span className='number'>
+                        {points}
+                    </span>
+                </ScoreBox>
+            </Container>
+        </Content>
     )
 }

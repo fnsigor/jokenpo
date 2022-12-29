@@ -30,8 +30,6 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
 
-    padding-top: 5rem;
-
    background: radial-gradient(var(--Radial-Gradient)) no-repeat;
     color: #fff;
 
