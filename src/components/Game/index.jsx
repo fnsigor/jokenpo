@@ -23,7 +23,7 @@ const Content = styled.div`
 
 export function Game({ img, value, setNewGame }) {
     return (
-        <Content onClick={ () => setNewGame(value) }>
+        <Content onClick={ () => setNewGame({img, value}) }>
             <img src={img} title={value} />
         </Content>
     )
