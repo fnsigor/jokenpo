@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 
 export const Content = styled.div`
     padding-top: 3rem;
-    background-color: red;
 `
 
 export const Container = styled.div`

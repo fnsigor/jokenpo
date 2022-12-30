@@ -18,7 +18,7 @@ function App() {
    return (
       <Content>
          <Score points={points}/>
-         {selectedGame ? (<Result selectedGame={selectedGame}/>) : (<Select setNewGame={setNewGame}/>)}
+         {selectedGame ? (<Result selectedGame={selectedGame} setPoint={setPoint}/>) : (<Select setNewGame={setNewGame}/>)}
       </Content>
    )
 }
