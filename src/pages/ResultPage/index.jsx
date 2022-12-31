@@ -14,6 +14,7 @@ const Content = styled.div`
     flex-grow: 1;
     position: relative;
     border: 1px solid red;
+    gap: 80px;
 
     display: flex;
     align-items: center;
@@ -24,13 +25,21 @@ const Content = styled.div`
     }
 `
 
-const Buttons = styled.div`
-    border: 1px solid red;
+const Button = styled.button`
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-inline: auto;
+`
 
-
-    button{
-        padding: 10px 20px;
-    }
+const P = styled.p`
+    text-align: center;
+    font-size:60px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 `
 
 export function Result({ selectedGame, setPoint }) {
@@ -38,7 +47,7 @@ export function Result({ selectedGame, setPoint }) {
 
     const [result, setResult] = useState()
     const [machineGameImg, setMachineGameImg] = useState()
-    
+
     function generateRandomGame() {
         const games = ['Scissors', 'Paper', 'Rock', 'Lizard', 'Spock']
         const randomNumber = Math.floor(Math.random() * (games.length - 0) + 0)
@@ -53,18 +62,18 @@ export function Result({ selectedGame, setPoint }) {
                 setMachineGameImg(scissors)
                 break;
             case 'Paper':
-             
+
                 setMachineGameImg(paper)
                 break;
             case 'Rock':
                 setMachineGameImg(rock)
                 break;
             case 'Lizard':
-  
+
                 setMachineGameImg(lizard)
                 break;
             case 'Spock':
-              
+
                 setMachineGameImg(spock)
                 break;
         }
@@ -75,20 +84,21 @@ export function Result({ selectedGame, setPoint }) {
         switch (selectedGame.value) {
 
             case 'Scissors':
-                if (machineGame === 'Scissors') {
+                if (machineGame === machineGame) {
                     setResult('Empate')
                 } else if (machineGame === 'Paper' || machineGame === 'Lizard') {
                     setResult('Win')
                     setPoint(currentScore => currentScore + 1)
                 } else {
                     setResult('Lose')
+                    setPoint(0)
                 }
                 break;
 
 
 
             case 'Paper':
-                if (machineGame === 'Paper') {
+                if (machineGame === machineGame) {
                     setResult('Empate')
                 } else if (machineGame === 'Rock' || machineGame === 'Spock') {
                     setResult('Win')
@@ -100,7 +110,7 @@ export function Result({ selectedGame, setPoint }) {
 
 
             case 'Rock':
-                if (machineGame === 'Rock') {
+                if (machineGame === machineGame) {
                     setResult('Empate')
                 } else if (machineGame === 'Scissors' || machineGame === 'Lizard') {
                     setResult('Win')
@@ -111,7 +121,7 @@ export function Result({ selectedGame, setPoint }) {
                 break;
 
             case 'Lizard':
-                if (machineGame === 'Lizard') {
+                if (machineGame === machineGame) {
                     setResult('Empate')
                 } else if (machineGame === 'Paper' || machineGame === 'Spock') {
                     setResult('Win')
@@ -123,7 +133,7 @@ export function Result({ selectedGame, setPoint }) {
 
 
             case 'Spock':
-                if (machineGame === 'Lizard') {
+                if (machineGame === machineGame) {
                     setResult('Empate')
                 } else if (machineGame === 'Scissors' || machineGame === 'Rock') {
                     setResult('Win')
@@ -137,14 +147,10 @@ export function Result({ selectedGame, setPoint }) {
 
     useEffect(() => {
 
-
         const machineGame = generateRandomGame()
-        getResult(machineGame)
+
         updateMachineGameImg(machineGame)
-
-
-       
-
+        getResult(machineGame)
 
 
     }, [selectedGame])
@@ -153,10 +159,10 @@ export function Result({ selectedGame, setPoint }) {
     return (
         <Content>
             <Game img={selectedGame.img} />
-            <Buttons>
-                <p>Empate</p>
-                <button>Play Again</button>
-            </Buttons>
+            <di>
+                <P>{result}</P>
+                <Button>Play Again</Button>
+            </di>
             <Game img={machineGameImg} />
         </Content>
     )
