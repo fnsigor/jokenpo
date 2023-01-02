@@ -63,7 +63,7 @@ export const Content = styled.div`
 
 
 
-export function Select({ setNewGame }) {
+export function SelectGamePage({ setNewGame }) {
 
 
     return (

@@ -62,7 +62,7 @@ export const ScoreBox = styled.div`
 
 
 
-export function Score({ points }) {
+export function Score({ score }) {
     return (
         <Content>
 
@@ -79,7 +79,7 @@ export function Score({ points }) {
                         score
                     </span>
                     <span className='number'>
-                        {points}
+                        {score}
                     </span>
                 </ScoreBox>
             </Container>
