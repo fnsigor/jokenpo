@@ -13,7 +13,6 @@ const Content = styled.div`
 
     flex-grow: 1;
     position: relative;
-    border: 1px solid red;
     gap: 80px;
 
     display: flex;
@@ -42,10 +41,9 @@ const P = styled.p`
     margin-bottom: 10px;
 `
 
-export function Result({ selectedGame, setPoint }) {
+export function ResultPage({ selectedGame, setScore, setNewGame }) {
 
-
-    const [result, setResult] = useState()
+    const [result, setResult] = useState('')
     const [machineGameImg, setMachineGameImg] = useState()
 
     function generateRandomGame() {
@@ -57,23 +55,24 @@ export function Result({ selectedGame, setPoint }) {
 
     function updateMachineGameImg(machineGame) {
         switch (machineGame) {
-            case 'Scissors':
 
+            case 'Scissors':
                 setMachineGameImg(scissors)
                 break;
-            case 'Paper':
 
+            case 'Paper':
                 setMachineGameImg(paper)
                 break;
+
             case 'Rock':
                 setMachineGameImg(rock)
                 break;
-            case 'Lizard':
 
+            case 'Lizard':
                 setMachineGameImg(lizard)
                 break;
-            case 'Spock':
 
+            case 'Spock':
                 setMachineGameImg(spock)
                 break;
         }
@@ -150,7 +149,7 @@ export function Result({ selectedGame, setPoint }) {
         const machineGame = generateRandomGame()
 
         updateMachineGameImg(machineGame)
-        getResult(machineGame)
+        // getResult(machineGame)
 
 
     }, [selectedGame])
@@ -159,10 +158,10 @@ export function Result({ selectedGame, setPoint }) {
     return (
         <Content>
             <Game img={selectedGame.img} />
-            <di>
+            <div>
                 <P>{result}</P>
-                <Button>Play Again</Button>
-            </di>
+                <Button onClick={()=>setNewGame(false)}>Play Again</Button>
+            </div>
             <Game img={machineGameImg} />
         </Content>
     )
