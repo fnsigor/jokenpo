@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Result } from './pages/ResultPage'
-import { Select } from './pages/SelectPage'
+import { ResultPage } from './pages/ResultPage'
+import { SelectGamePage } from './pages/SelectPage'
 import { Score } from './components/Score'
 import styled, { css } from 'styled-components'
 
@@ -12,13 +12,19 @@ function App() {
       height: 100vh;
    `
 
-   const [selectedGame, setNewGame] = useState(false)
-   const [points, setPoint] = useState(0)
+   const [game, setNewGame] = useState({ img: undefined, value: undefined, isSelected: false })
+   const [score, setScore] = useState(0)
+
 
    return (
       <Content>
-         <Score points={points}/>
-         {selectedGame ? (<Result selectedGame={selectedGame} setPoint={setPoint}/>) : (<Select setNewGame={setNewGame}/>)}
+         <Score score={score} />
+
+         {game.isSelected
+            ? (<ResultPage selectedGame={game} setScore={setScore} setNewGame={setNewGame} />)
+            : (<SelectGamePage setNewGame={setNewGame} />)
+         }
+         
       </Content>
    )
 }
