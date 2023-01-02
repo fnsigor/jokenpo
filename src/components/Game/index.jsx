@@ -23,7 +23,7 @@ const Content = styled.div`
 
 export function Game({ img, value, setNewGame }) {
     return (
-        <Content onClick={ () => setNewGame({img, value}) }>
+        <Content onClick={ () => setNewGame({img, value, isSelected: true}) }>
             <img src={img} title={value} />
         </Content>
     )
