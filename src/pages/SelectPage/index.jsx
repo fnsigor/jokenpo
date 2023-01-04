@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-
+import React, { useState, useEffect } from 'react';
 import BGpentagon from '../../assets/backgrounds/bg-pentagon.svg'
 
 import rock from '../../assets/games/icon-rock.svg'
@@ -64,7 +64,6 @@ export const Content = styled.div`
 
 
 export function SelectGamePage({ setNewGame }) {
-
 
     return (
         <Content>
