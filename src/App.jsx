@@ -128,17 +128,12 @@ function App() {
 
    useEffect(() => {
 
-
-      
       if (game.isSelected) {
          
          const machineGame = generateRandomGame()
-         alert('A máquina escolheu: ' + machineGame)
          updateMachineGameImg(machineGame)
          getResult(machineGame)
          
-      } else {
-         alert('seleção')
       }
 
    }, [game])
