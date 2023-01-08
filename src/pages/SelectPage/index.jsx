@@ -25,7 +25,6 @@ export const Content = styled.div`
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
-        border-color: #ecaa23;
     }
 
     div:nth-of-type(2){
@@ -39,21 +38,18 @@ export const Content = styled.div`
         top: 72%;
         right: 34%;
         transform: translateX(-50%);
-        border-color: #dd405a;
     }
 
     div:nth-of-type(4){
         top: 72%;
         left: 42%;
         transform: translateX(-50%);
-        border-color: #8c5de5;
     }
 
     div:nth-of-type(5){
         top: 30%;
         left: 38%;
         transform: translateX(-50%);
-        border-color: #58bbd2;
     }
 
     
