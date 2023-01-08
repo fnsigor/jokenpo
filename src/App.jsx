@@ -3,6 +3,7 @@ import { ResultPage } from './pages/ResultPage'
 import { SelectGamePage } from './pages/SelectPage'
 import { Score } from './components/Score'
 import styled, { css } from 'styled-components'
+import { Rules } from './components/Rules'
 
 import rock from './assets/games/icon-rock.svg'
 import paper from './assets/games/icon-paper.svg'
@@ -21,7 +22,9 @@ function App() {
    const [game, setNewGame] = useState({ img: undefined, value: undefined, isSelected: false })
    const [score, setScore] = useState(0)
    const [machineGame, setMachineGame] = useState({ img: undefined, value: undefined })
-   const [result, setResult] = useState('XXX')
+   const [result, setResult] = useState('')
+
+   const [showRule, setShowRule] = useState(false)
 
    function updateMachineGame() {
 
@@ -53,7 +56,7 @@ function App() {
       }
    }
 
-   
+
 
    function getResult() {
       switch (game.value) {
@@ -154,6 +157,8 @@ function App() {
             />)
             : (<SelectGamePage setNewGame={setNewGame} />)
          }
+
+         <Rules showRule={showRule} setShowRule={setShowRule}/>
 
       </Content>
    )
