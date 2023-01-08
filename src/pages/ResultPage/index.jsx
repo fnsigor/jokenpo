@@ -17,24 +17,7 @@ const Content = styled.div`
 
 `
 
-const Button = styled.button`
-    padding: 15px 35px;
-    border-radius: 10px;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    margin-inline: auto;
-
-    &:hover{
-        cursor: pointer;
-    }
-`
-
 const GameDiv = styled.div`
-    border: 1px solid red;
-
-
     *{
         margin-inline: auto;
         position: relative
@@ -45,11 +28,8 @@ const GameDiv = styled.div`
         font-size: 25px;
         margin-bottom: 40px;
     }
-
-
     
 `
-
 
 export function ResultPage({ selectedGame, setNewGame, result, machineGame }) {
 
@@ -73,10 +53,7 @@ export function ResultPage({ selectedGame, setNewGame, result, machineGame }) {
                 <p>You picked</p>
                 <Game img={selectedGame.img} value={selectedGame.value} />
             </GameDiv>
-            <div>
-                <Result content={result} visible={visible}></Result>
-                <Button onClick={() =>setNewGame({ isSelected: false })}>Play Again</Button>
-            </div>
+           {visible && (<Result result={result} setNewGame={setNewGame}/>)}
             <GameDiv>
                 <p>The House picked</p>
                 <Game img={machineGameImg} visible={visible} value={machineGame.value} />
