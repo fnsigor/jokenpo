@@ -63,7 +63,7 @@ function App() {
 
          case 'Scissors':
             if (machineGame.value === 'Scissors') {
-               setResult('Empate')
+               setResult('Tie')
 
             } else if (machineGame.value === 'Paper' || machineGame.value === 'Lizard') {
                setResult('Win')
@@ -78,7 +78,7 @@ function App() {
 
          case 'Paper':
             if (machineGame.value === 'Paper') {
-               setResult('Empate')
+               setResult('Tie')
 
             } else if (machineGame.value === 'Rock' || machineGame.value === 'Spock') {
                setResult('Win')
@@ -92,7 +92,7 @@ function App() {
 
          case 'Rock':
             if (machineGame.value === 'Rock') {
-               setResult('Empate')
+               setResult('Tie')
 
             } else if (machineGame.value === 'Scissors' || machineGame.value === 'Lizard') {
                setResult('Win')
@@ -105,7 +105,7 @@ function App() {
 
          case 'Lizard':
             if (machineGame.value === 'Lizard') {
-               setResult('Empate')
+               setResult('Tie')
 
             } else if (machineGame.value === 'Paper' || machineGame.value === 'Spock') {
                setResult('Win')
@@ -119,7 +119,7 @@ function App() {
 
          case 'Spock':
             if (machineGame.value === 'Spock') {
-               setResult('Empate')
+               setResult('Tie')
 
             } else if (machineGame.value === 'Scissors' || machineGame.value === 'Rock') {
                setResult('Win')
