@@ -14,47 +14,61 @@ import { Game } from '../../components/Game'
 export const Content = styled.div`
 
     flex-grow: 1;
-    position: relative;
-    background: url(${BGpentagon}) no-repeat center;
-    background-size: contain;
-    padding-block: 10rem;
-    background-origin: content-box;
+    display: flex;
 
- 
-     div:nth-of-type(1){
-        top: 10%;
+    align-items: center;
+    justify-content: center;
+`
+
+const Pentagon = styled.div`
+
+    background: url(${BGpentagon}) no-repeat center;
+    height: 50vh;
+    width: 50vh;
+    
+    position: relative;
+
+    background-size: contain;
+
+
+
+    div:nth-of-type(1){
+        top: -5%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     div:nth-of-type(2){
-        top: 30%;
-        right: 30%;
+        top: 25%;
+        left: 95%;
         transform: translateX(-50%);
         border-color: #5574f7;
     }
 
     div:nth-of-type(3){
-        top: 72%;
-        right: 34%;
+        top: 75%;
+        left: 82%;
         transform: translateX(-50%);
     }
 
     div:nth-of-type(4){
-        top: 72%;
-        left: 42%;
+        top: 75%;
+        left: 18%;
         transform: translateX(-50%);
     }
 
     div:nth-of-type(5){
-        top: 30%;
-        left: 38%;
+        top: 25%;
+        left: 5%;
         transform: translateX(-50%);
     }
 
     
+    @media (max-width:1000px) {
+        height: 70vw;
+        width: 70vw;
+    }
 
-    
 `
 
 
@@ -63,11 +77,13 @@ export function SelectGamePage({ setNewGame }) {
 
     return (
         <Content>
-            <Game img={scissors} value='Scissors' className='Scissors' setNewGame={setNewGame} />
-            <Game img={paper} value='Paper' className='Paper' setNewGame={setNewGame} />
-            <Game img={rock} value='Rock' className='Rock' setNewGame={setNewGame} />
-            <Game img={lizard} value='Lizard' className='Lizard' setNewGame={setNewGame} />
-            <Game img={spock} value='Spock' className='Spock' setNewGame={setNewGame} />
+            <Pentagon>
+                <Game img={scissors} value='Scissors' className='Scissors' setNewGame={setNewGame} />
+                <Game img={paper} value='Paper' className='Paper' setNewGame={setNewGame} />
+                <Game img={rock} value='Rock' className='Rock' setNewGame={setNewGame} />
+                <Game img={lizard} value='Lizard' className='Lizard' setNewGame={setNewGame} />
+                <Game img={spock} value='Spock' className='Spock' setNewGame={setNewGame} />
+            </Pentagon>
         </Content>
     )
 }

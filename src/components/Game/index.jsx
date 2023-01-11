@@ -24,8 +24,8 @@ const Content = styled.div`
     ${({ visible }) => visible === false && css`
         border: none;
         background-color: #1a1a1aa0;
-        height: 16rem;
-        width: 16rem;
+        height: 160px;
+        width: 160px;
 
         img{
             display:none;
@@ -47,6 +47,30 @@ const Content = styled.div`
     ${({ value }) => value === 'Spock' && css`
         border-color: #58bbd2;
     ` }
+
+
+
+    @media (max-width: 1400px) {
+        height: 100px;
+        width: 100px;
+        border-width: 10px;
+
+        img{
+            height: 45px;
+            width: min-content;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        height: 14vh;
+        width: 14vh;
+        border-width: 1.5vh;
+
+        img{
+            height: 6vh;
+            width: min-content;
+        }
+    }
     
 `
 

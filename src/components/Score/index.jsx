@@ -14,30 +14,57 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    max-width: 85rem;
+    max-width: 850px;
     width: 100%;
 
     margin-inline: auto;
 
     border-radius: 10px;
+
+
+    @media (max-width: 1400px) {
+        padding: 1rem 1rem;
+        max-width: 700px;
+    }
+
+
+    @media (max-width: 1000px) {
+        width: 80%;
+        max-width: 500px
+    }
 `
 
 export const GamesDiv = styled.div`
 
     width: fit-content;
     
+    
     > *{
+        
         display: block;
         font-size: 2.5rem;
+    }
+
+
+    @media (max-width: 1400px) {
+        *{
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        *{
+            font-size: 1.4rem;
+        }
     }
 `
 
 export const ScoreBox = styled.div`
     background-color: #fff;
     color: black;
-    min-width: 15rem;
+    
     border-radius: 10px;
-    padding-block: 1rem;
+    padding: 1rem 5rem;
 
     > * {
         display: block;
@@ -52,6 +79,32 @@ export const ScoreBox = styled.div`
     }
     .number{
         font-size: 5rem;
+    }
+
+
+    @media (max-width: 1400px) {
+
+        padding: 1rem 3rem;
+
+        .title{
+            font-size: 1.6rem;
+        }
+
+        .number{
+            font-size: 3.5rem;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        padding: .5rem 2rem;
+
+        .title{
+            font-size: 1.4rem;
+        }
+
+        .number{
+            font-size: 2.5rem;
+        }
     }
 
 `

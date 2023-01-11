@@ -20,6 +20,13 @@ const Button = styled.button`
         background-color: #f2f2f2;
         color: var(--Score-Text);
     }
+
+
+    @media (max-width: 1000px) {
+        position: initial;
+        width: min-content;
+        margin: 20px auto;
+    }
 `
 
 const Images = styled.div`
@@ -33,40 +40,58 @@ const Images = styled.div`
     z-index: 2;
 
     .img{
-        height: 400px;
-        width: 400px;
+        height: 40rem;
+        width: 40rem;
         background-image: url(${desktopRules});
         background-repeat: no-repeat;
+        background-size: contain;
     }
 
     ${({ showRule }) => showRule === true && css`
         display: flex;
     `}
 
+    @media (max-width: 1000px) {
+        background-color: #FFF;
+
+        .img{
+            height: 32rem;
+            width: 32rem;
+        }
+
+        ${({ showRule }) => showRule === true && css`
+            display: flex;
+           
+        `}
+
+
+
+
+    }
     
 `
 
 const ImagesContent = styled.div`
 
-display: flex;
-padding-top:5px;
-justify-content: space-between;
-padding-inline: 15px;
+    display: flex;
+    padding-top:5px;
+    justify-content: space-between;
+    padding-inline: 15px;
 
     P{
         color: var(--Score-Text);
-        font-size: 25px;
+        font-size: 2.5rem;
         font-weight: 600;
     }
 
     button{
             background: none;
             border:none;
-            font-size:25px;
+            font-size:2.5rem;
             font-weight: bold;
             font-family: monospace;
             color: gray;
-        text-transform: uppercase;
+            text-transform: uppercase;
             text-align:end;
             height: min-content;
 
@@ -79,6 +104,26 @@ padding-inline: 15px;
     *{
         display: block
     }
+
+    @media (max-width: 1000px) {
+        p{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        button{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 25px;
+        }
+       
+    }
+
+   
         
 
 `
@@ -88,7 +133,7 @@ export function Rules({ showRule, setShowRule }) {
 
     return (
         <>
-            <Images className='images' showRule={showRule}>
+            <Images className='images' showRule={showRule}>0
                 <ImagesContent className='img'>
                     <p>Rules</p>
                     <button onClick={() => setShowRule(false)} title='Close'>X</button>
