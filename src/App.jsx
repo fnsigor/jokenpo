@@ -63,13 +63,13 @@ function App() {
 
          case 'Scissors':
             if (machineGame.value === 'Scissors') {
-               setResult('Tie')
+               setResult('DRAW')
 
             } else if (machineGame.value === 'Paper' || machineGame.value === 'Lizard') {
-               setResult('Win')
+               setResult('YOU WIN')
                setTimeout(() => setScore(score + 1), 1000)
             } else {
-               setResult('Lose')
+               setResult('YOU LOSE')
                setTimeout(() => setScore(0), 1000)
             }
             break;
@@ -78,13 +78,13 @@ function App() {
 
          case 'Paper':
             if (machineGame.value === 'Paper') {
-               setResult('Tie')
+               setResult('DRAW')
 
             } else if (machineGame.value === 'Rock' || machineGame.value === 'Spock') {
-               setResult('Win')
+               setResult('YOU WIN')
                setTimeout(() => setScore(score + 1), 1000)
             } else {
-               setResult('Lose')
+               setResult('YOU LOSE')
                setTimeout(() => setScore(0), 1000)
             }
             break;
@@ -92,26 +92,26 @@ function App() {
 
          case 'Rock':
             if (machineGame.value === 'Rock') {
-               setResult('Tie')
+               setResult('DRAW')
 
             } else if (machineGame.value === 'Scissors' || machineGame.value === 'Lizard') {
-               setResult('Win')
+               setResult('YOU WIN')
                setTimeout(() => setScore(score + 1), 1000)
             } else {
-               setResult('Lose')
+               setResult('YOU LOSE')
                setTimeout(() => setScore(0), 1000)
             }
             break;
 
          case 'Lizard':
             if (machineGame.value === 'Lizard') {
-               setResult('Tie')
+               setResult('DRAW')
 
             } else if (machineGame.value === 'Paper' || machineGame.value === 'Spock') {
-               setResult('Win')
+               setResult('YOU WIN')
                setTimeout(() => setScore(score + 1), 1000)
             } else {
-               setResult('Lose')
+               setResult('YOU LOSE')
                setTimeout(() => setScore(0), 1000)
             }
             break;
@@ -119,13 +119,13 @@ function App() {
 
          case 'Spock':
             if (machineGame.value === 'Spock') {
-               setResult('Tie')
+               setResult('DRAW')
 
             } else if (machineGame.value === 'Scissors' || machineGame.value === 'Rock') {
-               setResult('Win')
+               setResult('YOU WIN')
                setTimeout(() => setScore(score + 1), 1000)
             } else {
-               setResult('Lose')
+               setResult('YOU LOSE')
                setTimeout(() => setScore(0), 1000)
             }
             break;
