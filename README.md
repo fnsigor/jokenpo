@@ -5,7 +5,7 @@
 <!-- PROJECT MAIN IMAGE -->
 <div align="center">
 <img src="https://user-images.githubusercontent.com/86209425/211900340-e49e65f4-601f-4e5e-bf2d-a27bc4dbd2f9.png" width="80%" >
-<div/>
+</div>
 
 
 <br><br>
