@@ -1,6 +1,6 @@
 <!-- PROJECT NAME -->
 <h1 align="center">Rock, Paper, Scissors (and more) game</h1>
-<h4 align="center">A challenge from <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0">frontendmentor.io</a><h4/>
+<h4 align="center">A challenge from <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0">frontendmentor.io</a></h4>
 
 <!-- PROJECT MAIN IMAGE -->
 <div align="center">
@@ -16,9 +16,9 @@
 
 ## About
 * No, it's not a conventional jokenpo game. There are lizard and spock options. just accept.
-* All CSS code was done using <a href="https://styled-components.com/">Styled Components<a/> library.
-* I had some issues with React Strict Mode and its dual rendering with the useEffect hook. To solve this, I watched a <a href="https://www.youtube.com/watch?v=VUg7olsnusg&ab_channel=DigitalCEO">15-minute full English video<a/>, surprisingly, I understood everything.
-* Not sure what Rock, Paper, Scissors, Lizard, Spock is? <a href="https://www.youtube.com/watch?v=iSHPVCBsnLw">Check out this clip from The Big Bang Theory<a/>.
+* All CSS code was done using <a href="https://styled-components.com/">Styled Components</a> library.
+* I had some issues with React Strict Mode and its dual rendering with the useEffect hook. To solve this, I watched a <a href="https://www.youtube.com/watch?v=VUg7olsnusg&ab_channel=DigitalCEO">15-minute full English video</a>, surprisingly, I understood everything.
+* Not sure what Rock, Paper, Scissors, Lizard, Spock is? <a href="https://www.youtube.com/watch?v=iSHPVCBsnLw">Check out this clip from The Big Bang Theory</a>.
 <br><br>
 
  
@@ -42,7 +42,7 @@ The main features of the application are:
 
 ## Getting started
 
-* <a href="https://rock-paper-scissors-game-epxgrbpor-fnsigor.vercel.app/">Click this link<a/>
+* <a href="https://rock-paper-scissors-game-epxgrbpor-fnsigor.vercel.app/">Click this link</a>
 
 <br>
 
@@ -59,14 +59,14 @@ The main features of the application are:
 <br>
 
 ## Authors
-<a href="https://github.com/fnsigor">Igor Fernandes<a/>
+<a href="https://github.com/fnsigor">Igor Fernandes</a>
     
 <br>
   
-<div/> 
+</div> 
 <!--END CONTENT-->                                                       
 
-<div align="center"><i>Thanks to visiting me and good coding!<i/><div/>
+<div align="center"><i>Thanks to visiting me and good coding!</i></div>
 
 
 
