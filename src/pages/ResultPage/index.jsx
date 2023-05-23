@@ -41,6 +41,9 @@ const Content = styled.div`
 `
 
 const GameDiv = styled.div`
+
+    width: 20rem;
+
     *{
         margin-inline: auto;
         position: relative
@@ -58,6 +61,7 @@ const GameDiv = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        width: initial;
 
         *{
             margin-inline: initial;
